@@ -1,6 +1,6 @@
 Name:		texlive-plimsoll
 Version:	56605
-Release:	1
+Release:	2
 Summary:	Fonts with the Plimsoll symbol and LaTeX support
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/plimsoll

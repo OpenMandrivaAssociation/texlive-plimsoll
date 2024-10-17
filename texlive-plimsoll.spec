@@ -3,7 +3,7 @@ Version:	56605
 Release:	2
 Summary:	Fonts with the Plimsoll symbol and LaTeX support
 Group:		Publishing
-URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/plimsoll
+URL:		https://www.ctan.org/tex-archive/macros/latex/contrib/plimsoll
 License:	gpl3+
 Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/plimsoll.r%{version}.tar.xz
 Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/plimsoll.doc.r%{version}.tar.xz

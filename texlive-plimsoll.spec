@@ -1,9 +1,10 @@
 %global tl_name plimsoll
 %global tl_revision 56605
+%global tl_version 1
 
 Name:		texlive-%{tl_name}
 Epoch:		1
-Version:	1
+Version:	%{tl_version}
 Release:	%{tl_revision}.1
 Summary:	Fonts with the Plimsoll symbol and LaTeX support
 Group:		Publishing
@@ -14,7 +15,8 @@ Source1:	https://mirrors.ctan.org/systems/texlive/tlnet/archive/plimsoll.doc.r%{
 Source2:	https://mirrors.ctan.org/systems/texlive/tlnet/archive/plimsoll.source.r%{tl_revision}.tar.xz
 BuildArch:	noarch
 BuildSystem:	texlive
-Provides:	texlive(%{tl_name}) = %{tl_revision}
+Requires:	texlive-tlpkg
+Provides:	texlive(%{tl_name}) = %{version}
 
 %description
 This package provides access to the Plimsoll symbol for use with LaTeX.
@@ -24,3 +26,10 @@ well. The syntax for denoting the standard state is the same as
 suggested in the Comprehensive LaTeX Symbol List for emulating the
 Plimsoll mark.
 
+
+%install -a
+mkdir -p %{buildroot}%{_texmf_updmap_d}
+cat > %{buildroot}%{_texmf_updmap_d}/%{tl_name} <<'TL_DROPIN_EOF'
+# from plimsoll:
+Map plimsoll.map
+TL_DROPIN_EOF
